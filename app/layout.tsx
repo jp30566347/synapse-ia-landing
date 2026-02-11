@@ -1,8 +1,18 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
 import React from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
+const outfit = Outfit({ 
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+})
+
+const jakarta = Plus_Jakarta_Sans({ 
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
 
 export const metadata = {
   title: 'Synapse IA | Optimisation de processus par l\'IA à Lévis et Québec',
@@ -15,8 +25,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr" className={`${outfit.variable} ${jakarta.variable}`}>
+      <body className="font-sans antialiased bg-[#020617] text-slate-300 selection:bg-accent-500 selection:text-white">
+        {children}
+      </body>
     </html>
   )
 }
