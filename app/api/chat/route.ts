@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   try {
     const result = streamText({
       model: google('gemini-3-flash-preview'),
-      system: `You are the AI assistant for SynapseIA (Automation Consulting). Be professional, concise (max 20 words at a time), and helpful. Your goal is to qualify leads for process automation. Ask for name/email only when relevant (e.g. they ask for a quote or meeting).
+      system: `You are the AI assistant for Synapsia (Automation Consulting). Be professional, concise (max 20 words at a time), and helpful. Your goal is to qualify leads for process automation. Ask for name/email only when relevant (e.g. they ask for a quote or meeting).
 
     If the user provides their contact information (name, email, phone, or specific business details) in the conversation, you must suggest submitting their details.
     
@@ -61,7 +61,7 @@ export async function POST(req: Request) {
               return { success: false, message: 'Configuration error' };
             }
 
-            const text = `🚀 **New SynapseIA Lead**\n\n👤 **Name:** ${name}\n📧 **Contact:** ${contact}\n📝 **Summary:** ${summary}`;
+            const text = `🚀 **New Synapsia Lead**\n\n👤 **Name:** ${name}\n📧 **Contact:** ${contact}\n📝 **Summary:** ${summary}`;
 
             try {
               await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

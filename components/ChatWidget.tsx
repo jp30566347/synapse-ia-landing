@@ -56,7 +56,7 @@ export default function ChatWidget() {
                   <Bot size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">SynapseIA Assistant</h3>
+                  <h3 className="font-semibold text-sm">Synapsia Assistant</h3>
                   <p className="text-xs opacity-80">Automation Expert</p>
                 </div>
               </div>
@@ -87,7 +87,8 @@ export default function ChatWidget() {
               )}
               {messages.length === 0 && !error && (
                 <div className="text-center text-slate-300 text-sm mt-8 px-6">
-                  <p>👋 Hello! I am the SynapseIA virtual assistant.</p>
+                  <p>👋 Hello!</p>
+                  <p>Welcome to Synapsia!</p>
                   <p className="mt-2">How can I help you automate your processes today?</p>
                 </div>
               )}

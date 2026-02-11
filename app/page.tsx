@@ -24,7 +24,7 @@ export default function LandingPage() {
                   <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
                 </svg>
               </div>
-              <span className="font-heading font-bold text-xl tracking-tight text-white">SynapseIA</span>
+              <span className="font-heading font-bold text-xl tracking-tight text-white">Synapsia</span>
             </div>
             <div className="hidden md:flex items-center gap-1 p-1 bg-white/5 rounded-full border border-white/5">
               <a href="#solutions" className="px-5 py-2 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/10 rounded-full transition-all">Solutions</a>
@@ -66,7 +66,7 @@ export default function LandingPage() {
                 Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">Intelligent Automation.</span>
               </h1>
               <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                SynapseIA transforms your operations. Save time, reduce costs, and liberate your team from repetitive tasks through intelligent process automation.
+                Synapsia transforms your operations. Save time, reduce costs, and liberate your team from repetitive tasks through intelligent process automation.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                 <OpenChatCTA className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
@@ -264,7 +264,7 @@ export default function LandingPage() {
                       <div className="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center">
                         <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                       </div>
-                      <span className="text-white font-bold">SynapseIA</span>
+                      <span className="text-white font-bold">Synapsia</span>
                     </div>
                     <span className="text-brand-400 text-sm font-bold">Tailored & Affordable</span>
                   </div>
@@ -334,7 +334,7 @@ export default function LandingPage() {
                     <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
                   </svg>
                 </div>
-                <span className="font-heading font-bold text-white text-lg">SynapseIA</span>
+                <span className="font-heading font-bold text-white text-lg">Synapsia</span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed">
                 Accessible and effective artificial intelligence for modern businesses.
@@ -371,7 +371,7 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
-            <p>© 2024 SynapseIA. All rights reserved.</p>
+            <p>© 2024 Synapsia. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>
