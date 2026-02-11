@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`scroll-smooth ${outfit.variable} ${jakarta.variable}`}>
-      <body className="bg-[#020617] text-slate-300 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden">
+      <body className="bg-[#020617] text-slate-200 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden">
         {children}
         <ChatWidget />
       </body>
