@@ -13,10 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ai-sdk/google": "^3.0.24",
+    "@ai-sdk/google": "^1.2.22",
     "@fontsource/outfit": "^5.2.8",
     "@fontsource/plus-jakarta-sans": "^5.2.8",
-    "ai": "^6.0.79",
+    "ai": "^4.3.19",
     "clsx": "^2.1.1",
     "framer-motion": "^12.34.0",
     "lucide-react": "^0.563.0",
