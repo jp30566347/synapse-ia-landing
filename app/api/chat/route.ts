@@ -8,22 +8,14 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: google('gemini-1.5-pro'),
-    system: `You are the AI assistant for Synapse IA (Quebec/Lévis automation consulting). Be professional, concise, and helpful. Your goal is to qualify leads for process automation. Ask for name/email only when relevant (e.g. they ask for a quote or meeting).
+    system: `You are the AI assistant for SynapseIA (Automation Consulting). Be professional, concise, and helpful. Your goal is to qualify leads for process automation. Ask for name/email only when relevant (e.g. they ask for a quote or meeting).
 
-    IMPORTANT: If the user provides their contact information (name, email, phone, or specific business details) in the conversation, you MUST formatted a summary.
+    If the user provides their contact information (name, email, phone, or specific business details) in the conversation, you must suggest submitting their details.
     
-    After responding to the user, if you have collected contact info, you should perform a server-side action to notify the team. 
-    (Note: Since I am a text generation model, I cannot directly send HTTP requests to Telegram myself in this turn. I will assume the backend handles the tool calling or I will output a specific log if tool calling is enabled. For this implementation, I will just focus on the conversation. 
+    You have a 'submitContact' tool available. If you have collected clear contact info from the user, use this tool to send the lead to the team.
     
-    However, the system prompt instruction says: "If they provide contact info, format a summary and send it to Telegram". 
-    To strictly follow this in a route.ts without complex tool calling setup for now, I will instruct the model to just be the helpful assistant.
-    
-    Wait, the user requirement is: "If they provide contact info, format a summary and send it to Telegram via TELEGRAM_BOT_TOKEN to TELEGRAM_CHAT_ID."
-    
-    Since this is a simple route.ts using streamText, I can't easily inject a side-effect "send to telegram" *inside* the streaming response generation unless I use tools or a callback.
-    
-    Let's implement a 'submitContact' tool that the model can call.`
-    ,
+    Always answer in English unless the user speaks another language.
+    `,
     tools: {
       submitContact: {
         description: 'Submit contact details and lead summary to the team via Telegram.',
@@ -45,7 +37,7 @@ export async function POST(req: Request) {
             return { success: false, message: 'Configuration error' };
           }
 
-          const text = `🚀 **New Synapse IA Lead**\n\n👤 **Name:** ${name}\n📧 **Contact:** ${contact}\n📝 **Summary:** ${summary}`;
+          const text = `🚀 **New SynapseIA Lead**\n\n👤 **Name:** ${name}\n📧 **Contact:** ${contact}\n📝 **Summary:** ${summary}`;
 
           try {
             await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {

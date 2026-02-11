@@ -16,8 +16,8 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  title: "Synapse IA - L'Agence IA de Québec",
-  description: "Synapse IA aide les PME de Lévis et Québec à automatiser leurs processus répétitifs avec l'intelligence artificielle.",
+  title: "SynapseIA - L'Agence IA de Québec",
+  description: "SynapseIA aide les PME de Lévis et Québec à automatiser leurs processus répétitifs avec l'intelligence artificielle.",
 }
 
 export default function RootLayout({

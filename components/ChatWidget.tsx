@@ -46,7 +46,7 @@ export default function ChatWidget() {
                   <Bot size={20} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-sm">Synapse IA Assistant</h3>
+                  <h3 className="font-semibold text-sm">SynapseIA Assistant</h3>
                   <p className="text-xs opacity-80">Automation Expert</p>
                 </div>
               </div>
@@ -62,8 +62,8 @@ export default function ChatWidget() {
             <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-zinc-50 dark:bg-zinc-950/50">
               {messages.length === 0 && (
                 <div className="text-center text-muted-foreground text-sm mt-8 px-6">
-                  <p>👋 Bonjour! Je suis l'assistant virtuel de Synapse IA.</p>
-                  <p className="mt-2">Comment puis-je vous aider à automatiser vos processus aujourd'hui?</p>
+                  <p>👋 Hello! I am the SynapseIA virtual assistant.</p>
+                  <p className="mt-2">How can I help you automate your processes today?</p>
                 </div>
               )}
               
@@ -96,7 +96,7 @@ export default function ChatWidget() {
                   className="flex-1 px-4 py-2 pr-10 rounded-full border border-input bg-background text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 dark:bg-zinc-800 dark:border-zinc-700 dark:text-white"
                   value={input}
                   onChange={handleInputChange}
-                  placeholder="Tapez votre message..."
+                  placeholder="Type your message..."
                 />
                 <button
                   type="submit"
@@ -107,7 +107,7 @@ export default function ChatWidget() {
                 </button>
               </div>
               <div className="text-[10px] text-center text-muted-foreground mt-2 opacity-60">
-                L'IA peut faire des erreurs. Vérifiez les informations importantes.
+                AI can make mistakes. Check important info.
               </div>
             </form>
           </motion.div>
