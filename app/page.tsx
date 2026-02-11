@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function LandingPage() {
   return (
-    <div className="bg-[#020617] text-slate-300 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden relative min-h-screen">
+    <div className="bg-[#020617] text-slate-300 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden">
+      {/* Background Blobs and Grid */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-brand-600/20 rounded-full blur-[120px] animate-blob"></div>
         <div className="absolute top-[20%] right-[-10%] w-[35%] h-[35%] bg-accent-600/20 rounded-full blur-[120px] animate-blob [animation-delay:2000ms]"></div>
@@ -10,6 +11,7 @@ export default function LandingPage() {
         <div className="absolute inset-0 grid-bg"></div>
       </div>
 
+      {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 border-b border-white/5 bg-[#020617]/80 backdrop-blur-md transition-all duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
@@ -26,7 +28,10 @@ export default function LandingPage() {
             </div>
             <div className="hidden md:block">
               <a href="#contact" className="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 overflow-hidden">
-                <span className="relative z-10 flex items-center gap-2"> Audit Gratuit <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg> </span>
+                <span className="relative z-10 flex items-center gap-2">
+                  Audit Gratuit
+                  <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </span>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-600 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </a>
             </div>
@@ -39,6 +44,7 @@ export default function LandingPage() {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -50,11 +56,20 @@ export default function LandingPage() {
                 </span>
                 Spécialistes IA pour Lévis & Québec
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-white mb-6 leading-[1.1]"> Propulsez votre <br className="hidden md:block" /> PME avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">l'IA Locale.</span> </h1>
-              <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light"> Synapse IA transforme vos opérations. Gagnez du temps, réduisez vos coûts et libérez votre équipe des tâches répétitives grâce à l'automatisation intelligente. </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+                Propulsez votre <br className="hidden md:block" /> PME avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">l'IA Locale.</span>
+              </h1>
+              <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                Synapse IA transforme vos opérations. Gagnez du temps, réduisez vos coûts et libérez votre équipe des tâches répétitives grâce à l'automatisation intelligente.
+              </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"> Lancer l'audit <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg> </a>
-                <a href="#solutions" className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white font-semibold rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center backdrop-blur-sm"> Voir les solutions </a>
+                <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                  Lancer l'audit
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </a>
+                <a href="#solutions" className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white font-semibold rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center backdrop-blur-sm">
+                  Voir les solutions
+                </a>
               </div>
               <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 border-t border-white/5 pt-8">
                 <div>
@@ -73,6 +88,7 @@ export default function LandingPage() {
                 </div>
               </div>
             </div>
+
             <div className="relative hidden lg:block perspective-1000">
               <div className="relative w-full aspect-square max-w-[500px] mx-auto animate-float">
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-500/20 to-accent-500/20 rounded-full blur-3xl"></div>
@@ -123,6 +139,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Solutions Section */}
       <section id="solutions" className="py-24 relative z-10 bg-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -188,6 +205,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Why Choose Section */}
       <section className="py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -252,6 +270,7 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Contact Section */}
       <section id="contact" className="py-24 relative z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-card rounded-3xl p-1 overflow-hidden relative">
@@ -272,21 +291,21 @@ export default function LandingPage() {
               <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-500 uppercase">Nom</label>
-                    <input type="text" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Votre nom" />
+                    <label htmlFor="nom" className="text-xs font-bold text-slate-500 uppercase">Nom</label>
+                    <input type="text" id="nom" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Votre nom" />
                   </div>
                   <div className="space-y-1">
-                    <label className="text-xs font-bold text-slate-500 uppercase">Entreprise</label>
-                    <input type="text" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Nom de PME" />
+                    <label htmlFor="entreprise" className="text-xs font-bold text-slate-500 uppercase">Entreprise</label>
+                    <input type="text" id="entreprise" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Nom de PME" />
                   </div>
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-500 uppercase">Courriel Pro</label>
-                  <input type="email" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="vous@entreprise.ca" />
+                  <label htmlFor="email" className="text-xs font-bold text-slate-500 uppercase">Courriel Pro</label>
+                  <input type="email" id="email" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="vous@entreprise.ca" />
                 </div>
                 <div className="space-y-1">
-                  <label className="text-xs font-bold text-slate-500 uppercase">Défi principal</label>
-                  <textarea rows={3} className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600 resize-none" placeholder="Ex: Trop de saisie manuelle..."></textarea>
+                  <label htmlFor="message" className="text-xs font-bold text-slate-500 uppercase">Défi principal</label>
+                  <textarea id="message" rows={3} className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600 resize-none" placeholder="Ex: Trop de saisie manuelle..."></textarea>
                 </div>
                 <button type="button" className="w-full py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition-all shadow-lg hover:-translate-y-1"> Demander mon audit gratuit </button>
               </form>
