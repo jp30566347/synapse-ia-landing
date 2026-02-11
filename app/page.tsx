@@ -78,7 +78,7 @@ const LandingPage = () => {
             </div>
             <div className="mb-6">
               <label className="block text-sm font-bold mb-2">Votre plus grand défi actuel</label>
-              <textarea className="w-full p-3 rounded border border-slate-200 focus:outline-blue-900" rows="3" placeholder="Saisie manuelle, gestion d'inventaire, etc."></textarea>
+              <textarea className="w-full p-3 rounded border border-slate-200 focus:outline-blue-900" rows={3} placeholder="Saisie manuelle, gestion d'inventaire, etc."></textarea>
             </div>
             <button type="submit" className="w-full bg-blue-700 text-white font-bold py-4 rounded hover:bg-blue-600 transition">
               Envoyer la demande
