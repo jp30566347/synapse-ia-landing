@@ -1,6 +1,7 @@
 import './globals.css'
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
 import React from 'react'
+import ChatWidget from '@/components/ChatWidget'
 
 const outfit = Outfit({ 
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
     <html lang="fr" className={`scroll-smooth ${outfit.variable} ${jakarta.variable}`}>
       <body className="bg-[#020617] text-slate-300 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden">
         {children}
+        <ChatWidget />
       </body>
     </html>
   )
