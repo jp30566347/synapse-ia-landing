@@ -62,7 +62,7 @@ export default function LandingPage() {
               </div>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
                 Propulsez votre <br className="hidden md:block" />
-                PME avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">l&apos;IA Locale.</span>
+                PME avec <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">l&apos;Automatisation Intelligente.</span>
               </h1>
               <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
                 Synapse IA transforme vos opérations. Gagnez du temps, réduisez vos coûts et libérez votre équipe des tâches répétitives grâce à l&apos;automatisation intelligente.
