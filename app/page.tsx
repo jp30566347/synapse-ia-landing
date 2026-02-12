@@ -2,6 +2,11 @@ import React from 'react';
 import ChatWidget from '@/components/ChatWidget';
 
 export default function LandingPage() {
+  const handleStartChat = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent('open-chat'));
+  };
+
   return (
     <>
       {/* Background */}
@@ -24,7 +29,7 @@ export default function LandingPage() {
                   <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
                 </svg>
               </div>
-              <span className="font-heading font-bold text-xl tracking-tight text-white">SynapseIA</span>
+              <span className="font-heading font-bold text-xl tracking-tight text-white">SynapsIA</span>
             </div>
             <div className="hidden md:flex items-center gap-1 p-1 bg-white/5 rounded-full border border-white/5">
               <a href="#solutions" className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">Solutions</a>
@@ -32,13 +37,13 @@ export default function LandingPage() {
               <a href="#about" className="px-5 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-all">About</a>
             </div>
             <div className="hidden md:block">
-              <a href="#contact" className="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 overflow-hidden">
+              <button onClick={handleStartChat} className="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-bold text-white transition-all duration-200 bg-white/10 border border-white/10 rounded-full hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
-                  Free Audit
+                  Start Chat
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </span>
                 <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-600 to-accent-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </a>
+              </button>
             </div>
             <div className="md:hidden">
               <button type="button" className="p-2 text-slate-300 hover:text-white" aria-label="Menu">
@@ -66,13 +71,13 @@ export default function LandingPage() {
                 Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-accent-400 to-brand-400 animate-shimmer bg-[length:200%_auto]">Intelligent Automation.</span>
               </h1>
               <p className="mt-6 text-xl text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-                SynapseIA transforms your operations. Save time, reduce costs, and liberate your team from repetitive tasks through intelligent process automation.
+                SynapsIA transforms your operations. Save time, reduce costs, and liberate your team from repetitive tasks through intelligent process automation.
               </p>
               <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
-                  Start Audit
+                <button onClick={handleStartChat} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-600 to-accent-600 hover:from-brand-500 hover:to-accent-500 text-white font-bold rounded-xl shadow-lg shadow-brand-500/20 hover:shadow-brand-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2">
+                  Start Chat
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                </a>
+                </button>
                 <a href="#solutions" className="w-full sm:w-auto px-8 py-4 bg-white/5 text-white font-semibold rounded-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center backdrop-blur-sm">
                   View Solutions
                 </a>
@@ -80,12 +85,12 @@ export default function LandingPage() {
               <div className="mt-12 flex items-center justify-center lg:justify-start gap-8 border-t border-white/5 pt-8">
                 <div>
                   <div className="text-3xl font-heading font-bold text-white">100%</div>
-                  <div className="text-sm text-slate-500 uppercase tracking-wider">Satisfaction</div>
+                  <div className="text-sm text-slate-500 uppercase tracking-wider">QC</div>
                 </div>
                 <div className="w-px h-10 bg-white/10" />
                 <div>
                   <div className="text-3xl font-heading font-bold text-white">3x</div>
-                  <div className="text-sm text-slate-500 uppercase tracking-wider">Avg. ROI</div>
+                  <div className="text-sm text-slate-500 uppercase tracking-wider">ROI</div>
                 </div>
                 <div className="w-px h-10 bg-white/10" />
                 <div>
@@ -210,12 +215,12 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Why Choose Synapse */}
+      {/* Why Choose SynapsIA */}
       <section id="approach" className="py-24 relative overflow-hidden z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose Synapse?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose SynapsIA?</h2>
               <p className="text-slate-400 text-lg mb-8">Unlike generic international agencies, we understand the specific challenges of modern enterprises. We know that businesses need simple, effective solutions.</p>
               <ul className="space-y-6">
                 <li className="flex items-start">
@@ -264,7 +269,7 @@ export default function LandingPage() {
                       <div className="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center">
                         <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
                       </div>
-                      <span className="text-white font-bold">SynapseIA</span>
+                      <span className="text-white font-bold">SynapsIA</span>
                     </div>
                     <span className="text-brand-400 text-sm font-bold">Tailored & Affordable</span>
                   </div>
@@ -275,47 +280,23 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Contact */}
-      <section id="contact" className="py-24 relative z-10">
+      {/* About Section (Replaced Contact) */}
+      <section id="about" className="py-24 relative z-10">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-card rounded-3xl p-1 overflow-hidden relative">
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-600/20 rounded-full blur-3xl -mr-20 -mt-20" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent-600/20 rounded-full blur-3xl -ml-20 -mb-20" />
-            <div className="bg-slate-900/90 rounded-[20px] p-8 md:p-12 relative z-10 grid md:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Let&apos;s talk about your project.</h2>
-                <p className="text-slate-400 mb-8">Fill out the form to get your free audit. We analyze your processes and identify automation opportunities.</p>
-                <div className="flex items-center gap-4 text-sm text-slate-300">
-                  <div className="flex -space-x-2">
-                    <img src="https://ui-avatars.com/api/?name=John&background=0ea5e9&color=fff" className="w-8 h-8 rounded-full border-2 border-slate-900" alt="Avatar" />
-                    <img src="https://ui-avatars.com/api/?name=Sarah&background=8b5cf6&color=fff" className="w-8 h-8 rounded-full border-2 border-slate-900" alt="Avatar" />
-                  </div>
-                  <p>Response guaranteed within 24h.</p>
-                </div>
-              </div>
-              <form className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="space-y-1">
-                    <label htmlFor="nom" className="text-xs font-bold text-slate-500 uppercase">Name</label>
-                    <input type="text" id="nom" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Your name" />
-                  </div>
-                  <div className="space-y-1">
-                    <label htmlFor="entreprise" className="text-xs font-bold text-slate-500 uppercase">Company</label>
-                    <input type="text" id="entreprise" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="Company Name" />
-                  </div>
-                </div>
-                <div className="space-y-1">
-                  <label htmlFor="email" className="text-xs font-bold text-slate-500 uppercase">Work Email</label>
-                  <input type="email" id="email" className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600" placeholder="you@company.com" />
-                </div>
-                <div className="space-y-1">
-                  <label htmlFor="message" className="text-xs font-bold text-slate-500 uppercase">Main Challenge</label>
-                  <textarea id="message" rows={3} className="w-full bg-slate-800/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-all placeholder-slate-600 resize-none" placeholder="Ex: Too much manual entry..." />
-                </div>
-                <button type="button" className="w-full py-4 bg-white text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition-all shadow-lg hover:-translate-y-1">
-                  Request Free Audit
-                </button>
-              </form>
+            <div className="bg-slate-900/90 rounded-[20px] p-8 md:p-12 relative z-10 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About SynapsIA</h2>
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                Led by a veteran software engineer with 15+ years of experience delivering high-performance applications for startups and Fortune 500 companies. We bring enterprise-grade engineering to local business automation.
+              </p>
+              <button 
+                onClick={handleStartChat}
+                className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 transition-all duration-200 bg-white border border-transparent rounded-xl hover:bg-slate-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 shadow-lg hover:-translate-y-1"
+              >
+                Start Chat
+              </button>
             </div>
           </div>
         </div>
@@ -334,7 +315,7 @@ export default function LandingPage() {
                     <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
                   </svg>
                 </div>
-                <span className="font-heading font-bold text-white text-lg">SynapseIA</span>
+                <span className="font-heading font-bold text-white text-lg">SynapsIA</span>
               </div>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Accessible and effective artificial intelligence for modern businesses.
@@ -352,26 +333,21 @@ export default function LandingPage() {
               <h4 className="font-bold text-white mb-6">Company</h4>
               <ul className="space-y-4 text-sm text-slate-400">
                 <li><a href="#approach" className="hover:text-brand-400 transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-brand-400 transition-colors">Careers</a></li>
-                <li><a href="#contact" className="hover:text-brand-400 transition-colors">Contact</a></li>
+                <li><button onClick={handleStartChat} className="hover:text-brand-400 transition-colors text-left">Start Chat</button></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-bold text-white mb-6">Contact</h4>
+              <h4 className="font-bold text-white mb-6">Location</h4>
               <ul className="space-y-4 text-sm text-slate-400">
                 <li className="flex items-center gap-2">
-                  <svg className="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                  contact@synapse-ai.com
-                </li>
-                <li className="flex items-center gap-2">
                   <svg className="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                  Global
+                  Montreal, Quebec
                 </li>
               </ul>
             </div>
           </div>
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-            <p>© 2024 SynapseIA. All rights reserved.</p>
+            <p>© 2024 SynapsIA. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white transition-colors">Privacy</a>
               <a href="#" className="hover:text-white transition-colors">Terms</a>

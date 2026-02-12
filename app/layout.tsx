@@ -16,8 +16,8 @@ const jakarta = Plus_Jakarta_Sans({
 })
 
 export const metadata = {
-  title: "SynapseIA - L'Agence IA de Québec",
-  description: "SynapseIA aide les PME de Lévis et Québec à automatiser leurs processus répétitifs avec l'intelligence artificielle.",
+  title: "SynapsIA - Intelligent Automation Consulting",
+  description: "Scale your business with AI. SynapsIA helps modern enterprises automate repetitive processes and optimize operations.",
 }
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`scroll-smooth ${outfit.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`scroll-smooth ${outfit.variable} ${jakarta.variable}`}>
       <body className="bg-[#020617] text-slate-300 font-sans selection:bg-accent-500 selection:text-white overflow-x-hidden">
         {children}
         <ChatWidget />
